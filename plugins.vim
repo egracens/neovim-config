@@ -17,6 +17,7 @@ Plug 'romgrk/barbar.nvim'
 
 " Nice File Tree
 Plug 'preservim/nerdtree'
+Plug 'ryanoasis/vim-devicons'
 
 " Autocomplete for JS. Not configured.
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
