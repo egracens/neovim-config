@@ -17,6 +17,15 @@ set expandtab
 " Clipboard compatibility for WSL
 set clipboard=unnamedplus
 
+" Allow background buffers
+set hidden
+
+" Disable backup files
+set nobackup
+
+" Disable swap files
+set noswapfile
+
 " Colors
 set termguicolors
 set background=dark
