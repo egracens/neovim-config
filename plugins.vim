@@ -2,11 +2,6 @@ call plug#begin()
 " Color Scheme
 Plug 'morhetz/gruvbox' "https://github.com/morhetz/gruvbox
 
-" Ruby auto completion and navigation. Looks deprecated. Research for updates.
-Plug 'neovim/nvim-lspconfig'
-Plug 'hrsh7th/nvim-compe'
-Plug 'hrsh7th/vim-vsnip'
-
 " Telescope. File finder with ability to preview.
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
@@ -51,5 +46,8 @@ Plug 'vim-test/vim-test'
 
 " Hard Mode
 Plug 'dusans/vim-hardmode'
+
+" Store Session
+Plug 'natecraddock/sessions.nvim'
 
 call plug#end()
