@@ -13,18 +13,6 @@ nnoremap <leader>ff <cmd>Telescope find_files<CR>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 
 " --- Coc ---
-" Show tooltip on TAB key press
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
-
 " Show tooltip for word over cursor
 nnoremap <silent> K :call CocAction('doHover')<CR>
 " Go to definition
