@@ -30,3 +30,9 @@ set noswapfile
 set termguicolors
 set background=dark
 colorscheme gruvbox
+
+" Moves cursor to next/previous line when navigation on current line impossible
+set ww+=<,>,[,],h,l
+
+" Auto Indentation
+set ai

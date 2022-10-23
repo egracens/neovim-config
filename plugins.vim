@@ -50,4 +50,9 @@ Plug 'dusans/vim-hardmode'
 " Store Session
 Plug 'natecraddock/sessions.nvim'
 
+" Snippets for notes
+Plug 'SirVer/ultisnips'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+let g:deoplete#enable_at_startup = 1
+
 call plug#end()
