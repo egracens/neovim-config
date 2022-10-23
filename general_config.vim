@@ -1,3 +1,5 @@
+" Set key mappings for russian keys
+set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
 " Show the line number
 set number
 
@@ -36,3 +38,7 @@ set ww+=<,>,[,],h,l
 
 " Auto Indentation
 set ai
+
+" vimwiki asks to set it up
+set nocompatible
+filetype plugin on
