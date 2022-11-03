@@ -42,3 +42,6 @@ set ai
 " vimwiki asks to set it up
 set nocompatible
 filetype plugin on
+
+" Automatically remove trailing whitespaces
+autocmd BufWritePre * :%s/\s\+$//e

@@ -11,6 +11,8 @@ nnoremap <leader>nf :NERDTreeFind<CR>
 nnoremap <leader>ff <cmd>Telescope find_files<CR>
 " Global find in files
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+" Find in git changes
+nnoremap <leader>fc <cmd>Telescope git_status<cr>
 
 " --- Coc ---
 " Use tab for trigger completion with characters ahead and navigate.
