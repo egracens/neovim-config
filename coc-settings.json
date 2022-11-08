@@ -10,7 +10,7 @@
   ],
   "tsserver.formatOnType": true,
   "coc.preferences.formatOnType": true,
-  "coc.preferences.rootPatterns": ["entrypoints", ".git", ".hg", ".projections.json"],
+  "coc.preferences.rootPatterns": ["javascript", "entrypoints/", ".git", ".hg", ".projections.json"],
   "codeLens.enable": true,
   "tsserver.log": "verbose"
 }

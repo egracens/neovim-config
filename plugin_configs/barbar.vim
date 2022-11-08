@@ -2,7 +2,7 @@ lua << EOF
 -- Set barbar's options
 require'bufferline'.setup {
   -- Enable/disable animations
-  animation = true,
+  animation = false,
 
   -- Enable/disable auto-hiding the tab bar when there is a single buffer
   auto_hide = false,
@@ -19,8 +19,11 @@ require'bufferline'.setup {
   clickable = true,
 
   -- Excludes buffers from the tabline
-  exclude_ft = {'javascript'},
-  exclude_name = {'package.json'},
+  exclude_ft = {},
+  exclude_name = {},
+
+  -- Show every buffer
+  hide = {current = false, inactive = false, visible = false},
 
   -- Enable/disable icons
   -- if set to 'numbers', will show buffer index in the tabline
@@ -42,14 +45,14 @@ require'bufferline'.setup {
 
   -- If true, new buffers will be inserted at the start/end of the list.
   -- Default is to insert after current buffer.
-  insert_at_end = false,
+  insert_at_end = true,
   insert_at_start = false,
 
   -- Sets the maximum padding width with which to surround each tab
   maximum_padding = 1,
 
   -- Sets the maximum buffer name length.
-  maximum_length = 30,
+  maximum_length = 45,
 
   -- If set, the letters for each buffer in buffer-pick mode will be
   -- assigned based on their name. Otherwise or in case all letters are
