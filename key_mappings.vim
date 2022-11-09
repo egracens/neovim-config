@@ -202,7 +202,21 @@ nnoremap <silent>    <A-7> <Cmd>BufferGoto 7<CR>
 nnoremap <silent>    <A-8> <Cmd>BufferGoto 8<CR>
 nnoremap <silent>    <A-9> <Cmd>BufferGoto 9<CR>
 nnoremap <silent>    <A-0> <Cmd>BufferLast<CR>
+
 " Pin/unpin buffer
 nnoremap <silent>    <A-p> <Cmd>BufferPin<CR>
 " Close buffer
 nnoremap <silent>    <A-c> <Cmd>BufferClose<CR>
+
+" Mac mappings
+nnoremap <silent>    ¡ <Cmd>BufferGoto 1<CR>
+nnoremap <silent>    ™ <Cmd>BufferGoto 2<CR>
+nnoremap <silent>    £ <Cmd>BufferGoto 3<CR>
+nnoremap <silent>    ¢ <Cmd>BufferGoto 4<CR>
+nnoremap <silent>    ∞ <Cmd>BufferGoto 5<CR>
+nnoremap <silent>    § <Cmd>BufferGoto 6<CR>
+nnoremap <silent>    ¶ <Cmd>BufferGoto 7<CR>
+nnoremap <silent>    • <Cmd>BufferGoto 8<CR>
+nnoremap <silent>    ª <Cmd>BufferGoto 9<CR>
+nnoremap <silent>    º <Cmd>BufferLast<CR>
+nnoremap <silent>    ç <Cmd>BufferClose<CR>
