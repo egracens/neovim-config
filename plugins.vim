@@ -56,4 +56,7 @@ Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'michal-h21/vim-zettel'
 
+" Yaml support
+Plug 'Einenlum/yaml-revealer'
+
 call plug#end()

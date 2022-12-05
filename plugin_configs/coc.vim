@@ -1,4 +1,4 @@
-let g:coc_global_extensions = ['coc-snippets', 'coc-css', 'coc-json', 'coc-yaml', 'coc-tabnine', 'coc-html', 'coc-tsserver', 'coc-solargraph']
+let g:coc_global_extensions = ['coc-snippets', 'coc-css', 'coc-json', 'coc-yaml', 'coc-html', 'coc-tsserver', 'coc-solargraph']
 
 " Add prettier integration if it set up in project
 if isdirectory('./node_modules') && isdirectory('./node_modules/prettier')
