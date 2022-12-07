@@ -221,3 +221,5 @@ nnoremap <silent>    • <Cmd>BufferGoto 8<CR>
 nnoremap <silent>    ª <Cmd>BufferGoto 9<CR>
 nnoremap <silent>    º <Cmd>BufferLast<CR>
 nnoremap <silent>    ç <Cmd>BufferClose<CR>
+
+nmap <leader>cp :let @+=expand("%")<CR>
