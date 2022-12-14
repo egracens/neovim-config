@@ -1,4 +1,4 @@
-source ~/.config/nvim/plugins.vim
+source ~/.config/nvim/plugins.lua
 source ~/.config/nvim/plugin_configs/airline.vim
 source ~/.config/nvim/plugin_configs/barbar.vim
 source ~/.config/nvim/plugin_configs/nerd_tree.vim
