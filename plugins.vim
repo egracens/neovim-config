@@ -18,9 +18,6 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'preservim/nerdtree'
 Plug 'ryanoasis/vim-devicons'
 
-" Autocomplete for JS. Not configured.
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
 " Git Integration
 Plug 'tpope/vim-fugitive'
 
@@ -31,9 +28,6 @@ Plug 'MaxMEllon/vim-jsx-pretty'
 " TS highlightin and indentation
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
-
-" Coc - Language server for JS and TS. Maybe setup it for Ruby?
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Ruby on Rails integration
 Plug 'tpope/vim-rails'
@@ -52,11 +46,21 @@ Plug 'natecraddock/sessions.nvim'
 
 " Notes
 Plug 'vimwiki/vimwiki'
-Plug 'junegunn/fzf'
-Plug 'junegunn/fzf.vim'
 Plug 'michal-h21/vim-zettel'
 
 " Yaml support
 Plug 'Einenlum/yaml-revealer'
+
+" LSP
+Plug 'williamboman/mason.nvim'
+Plug 'williamboman/mason-lspconfig.nvim'
+Plug 'neovim/nvim-lspconfig'
+
+" Code suggestions dropdown
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/cmp-cmdline'
+Plug 'hrsh7th/nvim-cmp'
 
 call plug#end()

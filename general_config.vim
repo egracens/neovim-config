@@ -1,5 +1,6 @@
 " Set key mappings for russian keys
 set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
+
 " Show the line number
 set number
 
@@ -14,7 +15,7 @@ set tabstop=2
 set shiftwidth=2
 
 " Convert tabs to spaces. Count of spaces per tab declared above.
-set expandtab 
+set expandtab
 
 " Clipboard compatibility for WSL
 set clipboard=unnamedplus
