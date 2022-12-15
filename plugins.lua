@@ -36,6 +36,9 @@ return require('packer').startup(function(use)
   -- Ruby integration
   use 'vim-ruby/vim-ruby'
 
+  -- Go integration
+  use 'fatih/vim-go'
+
   -- Test helpers
   use 'vim-test/vim-test'
 

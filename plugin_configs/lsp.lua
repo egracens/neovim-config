@@ -2,6 +2,7 @@ require('mason').setup()
 require('mason-lspconfig').setup({
   ensure_installed = { 'sumneko_lua', 'solargraph', 'tsserver' }
 })
+util = require("lspconfig/util")
 
 -- Mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
@@ -56,6 +57,22 @@ require('lspconfig').tsserver.setup{
 require('lspconfig').solargraph.setup{
   capabilities = capabilities,
   on_attach = on_attach
+}
+
+require('lspconfig').gopls.setup {
+  capabilities = capabilities,
+  on_attach = on_attach,
+  cmd = {"gopls", "serve"},
+  filetypes = {"go", "gomod"},
+  root_dir = util.root_pattern("go.work", "go.mod", ".git"),
+  settings = {
+    gopls = {
+      analyses = {
+        unusedparams = true,
+      },
+      staticcheck = true,
+    },
+  },
 }
 
 require('lspconfig').sumneko_lua.setup{
