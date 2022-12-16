@@ -43,6 +43,10 @@ require('packer').startup(function(use)
   use 'pangloss/vim-javascript'
   use 'MaxMEllon/vim-jsx-pretty'
 
+  -- TS integration
+  use 'leafgarland/typescript-vim'
+  use 'peitalin/vim-jsx-typescript'
+
   -- Ruby on Rails integration
   use 'tpope/vim-rails'
 

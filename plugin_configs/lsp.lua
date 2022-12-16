@@ -50,7 +50,7 @@ require('lspconfig').tsserver.setup{
   capabilities = capabilities,
   on_attach = on_attach,
   flags = lsp_flags,
-  filetypes = { "javascript", "javascriptreact" },
+  filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
   cmd = { "typescript-language-server", "--stdio" }
 }
 
