@@ -2,9 +2,9 @@ let mapleader=","
 
 " --- NerdTree ---
 " Open NerdTree
-nnoremap <leader>/ :NERDTreeToggle<CR>
+nnoremap <leader>/ :NvimTreeToggle<CR>
 " Show current file in NerdTree
-nnoremap <leader>nf :NERDTreeFind<CR>
+nnoremap <leader>nf :NvimTreeFindFile<CR>
 
 " --- Telescope ---
 " Find files
