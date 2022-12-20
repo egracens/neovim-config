@@ -83,6 +83,7 @@ require('packer').startup(function(use)
   use 'williamboman/mason.nvim'
   use 'williamboman/mason-lspconfig.nvim'
   use 'neovim/nvim-lspconfig'
+  use 'j-hui/fidget.nvim'
 
   -- Code suggestions dropdown
   use 'hrsh7th/cmp-nvim-lsp'
@@ -98,6 +99,7 @@ require('packer').startup(function(use)
 
   -- Syntax highlighting
   use 'nvim-treesitter/nvim-treesitter'
+  use 'mhinz/vim-startify'
 end)
 
 -- the first run will install packer and our plugins

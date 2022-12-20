@@ -6,5 +6,6 @@ source ~/.config/nvim/plugin_configs/nvim-cmp.lua
 source ~/.config/nvim/plugin_configs/lsp.lua
 source ~/.config/nvim/plugin_configs/treesitter.lua
 source ~/.config/nvim/plugin_configs/lualine.lua
+source ~/.config/nvim/plugin_configs/fidget.lua
 source ~/.config/nvim/key_mappings/general.vim
 source ~/.config/nvim/general_config.vim
