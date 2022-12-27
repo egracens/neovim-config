@@ -100,6 +100,9 @@ require('packer').startup(function(use)
   -- Syntax highlighting
   use 'nvim-treesitter/nvim-treesitter'
   use 'mhinz/vim-startify'
+
+  -- Multicursor
+  use 'mg979/vim-visual-multi'
 end)
 
 -- the first run will install packer and our plugins
