@@ -103,6 +103,12 @@ require('packer').startup(function(use)
 
   -- Multicursor
   use 'mg979/vim-visual-multi'
+
+  -- Search and replace
+  use {
+    'windwp/nvim-spectre',
+    requires = { { 'nvim-lua/plenary.nvim' } }
+  }
 end)
 
 -- the first run will install packer and our plugins
