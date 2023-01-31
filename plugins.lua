@@ -24,6 +24,9 @@ require('packer').startup(function(use)
     requires = { {'nvim-lua/plenary.nvim'} }
   }
 
+  use 'nvim-telescope/telescope-smart-history.nvim'
+  use { 'kkharji/sqlite.lua' }
+
   -- Tabs at top of the screen
   use {
     'romgrk/barbar.nvim',

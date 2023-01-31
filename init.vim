@@ -1,7 +1,7 @@
 source ~/.config/nvim/plugins.lua
 source ~/.config/nvim/plugin_configs/barbar.vim
 source ~/.config/nvim/plugin_configs/nvim-tree.lua
-source ~/.config/nvim/plugin_configs/telescope.vim
+source ~/.config/nvim/plugin_configs/telescope.lua
 source ~/.config/nvim/plugin_configs/nvim-cmp.lua
 source ~/.config/nvim/plugin_configs/lsp.lua
 source ~/.config/nvim/plugin_configs/treesitter.lua

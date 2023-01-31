@@ -14,6 +14,13 @@ nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 " Find in git changes
 nnoremap <leader>fc <cmd>Telescope git_status<cr>
 
+lua << EOF
+local builtin = require('telescope.builtin')
+vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
+vim.keymap.set('n', '<leader>fr', builtin.resume, {})
+EOF
+
 " --- Vim-Rails ---
 " gf - magic command (go to file, partial, view, model, relation etc)
 " :E<tab> - many helper commands
