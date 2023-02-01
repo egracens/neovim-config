@@ -17,15 +17,15 @@ require('packer').startup(function(use)
   -- Theme
   use 'morhetz/gruvbox'
 
+  -- Git Blame viewer
+  use 'RobertAudi/git-blame.vim'
+
   -- Telescope for searching
   use {
     'nvim-telescope/telescope.nvim',
     branch = '0.1.x',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
-
-  use 'nvim-telescope/telescope-smart-history.nvim'
-  use { 'kkharji/sqlite.lua' }
 
   -- Tabs at top of the screen
   use {
