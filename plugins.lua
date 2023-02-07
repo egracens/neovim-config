@@ -17,6 +17,9 @@ require('packer').startup(function(use)
   -- Theme
   use 'morhetz/gruvbox'
 
+  -- Highlight indentation level
+  use 'lukas-reineke/indent-blankline.nvim'
+
   -- Git Blame viewer
   use 'RobertAudi/git-blame.vim'
 
@@ -28,10 +31,7 @@ require('packer').startup(function(use)
   }
 
   -- Tabs at top of the screen
-  use {
-    'romgrk/barbar.nvim',
-    requires = { { 'nvim-tree/nvim-web-devicons' } }
-  }
+  use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
 
   -- Lualine
   use {

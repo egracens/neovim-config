@@ -1,5 +1,6 @@
 source ~/.config/nvim/plugins.lua
-source ~/.config/nvim/plugin_configs/barbar.vim
+source ~/.config/nvim/plugin_configs/bufferline.lua
+source ~/.config/nvim/plugin_configs/indent-blankline.lua
 source ~/.config/nvim/plugin_configs/nvim-tree.lua
 source ~/.config/nvim/plugin_configs/telescope.lua
 source ~/.config/nvim/plugin_configs/nvim-cmp.lua
