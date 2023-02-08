@@ -105,7 +105,22 @@ require('packer').startup(function(use)
 
   -- Syntax highlighting
   use 'nvim-treesitter/nvim-treesitter'
-  use 'mhinz/vim-startify'
+
+  use {
+    'glepnir/dashboard-nvim',
+    event = 'VimEnter',
+    config = function()
+      require('dashboard').setup{
+        theme = 'hyper',
+        config = {
+          week_header = {
+           enable = true,
+          },
+        },
+      }
+    end,
+    requires = {'nvim-tree/nvim-web-devicons'}
+  }
 
   -- Multicursor
   use 'mg979/vim-visual-multi'
