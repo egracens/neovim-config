@@ -17,6 +17,9 @@ require('packer').startup(function(use)
   -- Theme
   use 'morhetz/gruvbox'
 
+  -- Lazygit integration
+  use 'kdheepak/lazygit.nvim'
+
   -- Highlight indentation level
   use 'lukas-reineke/indent-blankline.nvim'
 
