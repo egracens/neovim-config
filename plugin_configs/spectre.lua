@@ -1,6 +1,6 @@
 require('spectre').setup({
   finder_cmd='ag',
-find_engine = {
+  find_engine = {
     ['rg'] = {
       cmd = "rg",
       args = {

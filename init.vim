@@ -9,6 +9,5 @@ source ~/.config/nvim/plugin_configs/treesitter.lua
 source ~/.config/nvim/plugin_configs/lualine.lua
 source ~/.config/nvim/plugin_configs/fidget.lua
 source ~/.config/nvim/plugin_configs/spectre.lua
-source ~/.config/nvim/key_mappings/general.vim
-source ~/.config/nvim/key_mappings/spectre.lua
 source ~/.config/nvim/general_config.vim
+source ~/.config/nvim/key_mappings/general.lua
