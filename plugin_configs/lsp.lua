@@ -1,6 +1,6 @@
 require('mason').setup()
 require('mason-lspconfig').setup({
-  ensure_installed = { 'sumneko_lua', 'solargraph', 'tsserver' }
+  ensure_installed = { 'lua_ls', 'solargraph', 'tsserver' }
 })
 util = require("lspconfig/util")
 
@@ -51,7 +51,25 @@ require('lspconfig').tsserver.setup{
   on_attach = on_attach,
   flags = lsp_flags,
   filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
-  cmd = { "typescript-language-server", "--stdio" }
+  cmd = { "typescript-language-server", "--stdio" },
+  diagnosticSeverityDenals = {
+    { pattern = "Parameter.* implicitly has an any type, but better type may be inferred from usage", severity = vim.lsp.protocol.DiagnosticSeverity.Hint }
+  },
+  settings = {
+    -- Добавьте вашу конфигурацию для tsserver
+    -- Например, вы можете добавить опцию "noImplicitAny": false
+    -- в опции "compilerOptions"
+    ["javascript"] = {
+      ["compilerOptions"] = {
+        ["noImplicitAny"] = false
+      }
+    },
+    ["typescript"] = {
+      ["compilerOptions"] = {
+        ["noImplicitAny"] = false
+      }
+    }
+  }
 }
 
 require('lspconfig').solargraph.setup{
@@ -75,17 +93,12 @@ require('lspconfig').gopls.setup {
   },
 }
 
-require('lspconfig').sumneko_lua.setup{
+require('lspconfig').lua_ls.setup{
   on_attach = on_attach,
   settings = {
     Lua = {
-      diagnostics = {
-        globals = { 'vim' }
-      },
-      workspace = {
-        library = vim.api.nvim_get_runtime_file("", true),
-        checkThirdParty = false
-      }
+      workspace = { checkThirdParty = false },
+      telemetry = { enable = false },
     }
   }
 }
@@ -94,7 +107,7 @@ require('lspconfig').sumneko_lua.setup{
 -- Configure LSP through rust-tools.nvim plugin.
 -- rust-tools will configure and enable certain LSP features for us.
 -- See https://github.com/simrat39/rust-tools.nvim#configuration
-local rustoyts = {
+local rustOpts = {
   tools = {
     runnables = {
       use_telescope = true,

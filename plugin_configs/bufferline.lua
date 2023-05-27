@@ -13,6 +13,33 @@ require("bufferline").setup{
           return 'Neovim Tree'
         end,
       }
+    },
+    groups = {
+      options = {
+        toggle_hidden_on_enter = true -- when you re-enter a hidden group this options re-opens that group so the buffer is visible
+      },
+      items = {
+        {
+          name = "Ruby",
+          priority = 1,
+          matcher = function(buf) -- Mandatory
+            return buf.filename:match('%.rb') and not buf.filename:match('%_spec')
+          end,
+        },
+        {
+          name = "JS",
+          priority = 2,
+          matcher = function(buf)
+            return buf.filename:match('%.js') or buf.filename:match('%.jsx')
+          end,
+        },
+        {
+          name = "Tests",
+          priority = 3,         matcher = function(buf) -- Mandatory
+            return buf.filename:match('%_test') or buf.filename:match('%_spec')
+          end,
+        }
+      }
     }
   }
 }
@@ -61,3 +88,5 @@ vim.api.nvim_set_keymap("n", "<A-8>", [[ <Esc><Cmd>lua require('bufferline').go_
 vim.api.nvim_set_keymap("n", "<A-9>", [[ <Esc><Cmd>lua require('bufferline').go_to_buffer(9, true)<CR>]], {noremap = true, silent = true, expr = false})
 vim.api.nvim_set_keymap("n", "<A-0>", [[ <Esc><Cmd>lua require('bufferline').go_to_buffer(10, true)<CR>]], {noremap = true, silent = true, expr = false})
 vim.api.nvim_set_keymap("n", "<A-c>", [[ <Esc><Cmd>lua _G.close_and_go_to_next()<CR>]], {noremap = true, silent = true, expr = false})
+
+vim.api.nvim_set_keymap("n", "<A-C>", [[ <Esc><Cmd>lua require('bufferline').go_to_buffer(10, true)<CR>]], {noremap = true, silent = true, expr = false})
