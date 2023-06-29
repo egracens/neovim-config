@@ -130,6 +130,12 @@ require('packer').startup(function(use)
     'windwp/nvim-spectre',
     requires = { { 'nvim-lua/plenary.nvim' } }
   }
+
+  -- Vertical Scrollbar
+  use('petertriho/nvim-scrollbar')
+
+  -- Search Highlighting
+  use('kevinhwang91/nvim-hlslens')
 end)
 
 -- the first run will install packer and our plugins

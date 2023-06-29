@@ -1,9 +1,11 @@
-function Map(mode, lhs, rhs, opts)
+function Map(mode, keybinding, command, opts)
   local options = { noremap = true, silent = true }
+
   if opts then
     options = vim.tbl_extend("force", options, opts)
   end
-  vim.keymap.set(mode, lhs, rhs, options)
+
+  vim.keymap.set(mode, keybinding, command, options)
 end
 
 vim.g.mapleader = ','

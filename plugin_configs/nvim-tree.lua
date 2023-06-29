@@ -44,8 +44,8 @@ local function on_attach()
     return { desc = 'nvim-tree: ' .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
   end
 
-  vim.keymap.set("n", "l", edit_or_open,          opts("Edit Or Open"))
-  vim.keymap.set("n", "h", api.tree.collapse_all, opts("Collapse all"))
+  -- vim.keymap.set("n", "l", edit_or_open,          opts("Edit Or Open"))
+  -- vim.keymap.set("n", "h", api.tree.collapse_all, opts("Collapse all"))
 end
 
 require("nvim-tree").setup({
