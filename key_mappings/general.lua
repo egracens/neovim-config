@@ -59,5 +59,4 @@ Map("n", "<C-u>", "<C-u>zz")
 
 -- Bind the function to F6 key
 Map('n', '<F6>', 'ggVG=<C-o>', { noremap = true, silent = true })
-Map('n', '<leader>rac', ':!rubocop -a %<CR>', { noremap = true, silent = true })
-
+Map('n', '<leader>rac', ':Format<CR>', { noremap = true, silent = true })

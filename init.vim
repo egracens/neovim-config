@@ -11,5 +11,6 @@ source ~/.config/nvim/plugin_configs/fidget.lua
 source ~/.config/nvim/plugin_configs/spectre.lua
 source ~/.config/nvim/plugin_configs/nvim-scrollbar.lua
 source ~/.config/nvim/plugin_configs/nvim-hlslens.lua
+source ~/.config/nvim/plugin_configs/formatter.lua
 source ~/.config/nvim/general_config.vim
 source ~/.config/nvim/key_mappings/general.lua

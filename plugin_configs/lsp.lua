@@ -45,7 +45,7 @@ local lsp_flags = {
   -- This is the default in Nvim 0.7+
   debounce_text_changes = 150,
 }
-
+vim.env["TSS_LOG"] = "-level verbose -file /home/egrace/tsserver.log"
 require('lspconfig').tsserver.setup{
   capabilities = capabilities,
   on_attach = on_attach,

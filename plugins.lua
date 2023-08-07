@@ -23,9 +23,6 @@ require('packer').startup(function(use)
   -- Highlight indentation level
   use 'lukas-reineke/indent-blankline.nvim'
 
-  -- Git Blame viewer
-  use 'RobertAudi/git-blame.vim'
-
   -- Telescope for searching
   use {
     'nvim-telescope/telescope.nvim',
@@ -89,7 +86,10 @@ require('packer').startup(function(use)
   use 'williamboman/mason.nvim'
   use 'williamboman/mason-lspconfig.nvim'
   use 'neovim/nvim-lspconfig'
-  use 'j-hui/fidget.nvim'
+  use {
+    'j-hui/fidget.nvim',
+    tag = 'legacy'
+  }
 
   -- Code suggestions dropdown
   use 'hrsh7th/cmp-nvim-lsp'
@@ -136,6 +136,8 @@ require('packer').startup(function(use)
 
   -- Search Highlighting
   use('kevinhwang91/nvim-hlslens')
+
+  use('mhartington/formatter.nvim')
 end)
 
 -- the first run will install packer and our plugins
