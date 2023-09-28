@@ -4,6 +4,9 @@ set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNO
 " Show the line number
 set number
 
+" Show relative line numbers
+set relativenumber
+
 " Enable Syntax Highlighting
 syntax enable
 
@@ -46,3 +49,6 @@ filetype plugin on
 
 " Automatically remove trailing whitespaces
 autocmd BufWritePre * :%s/\s\+$//e
+
+" Set zsh as default shell
+set shell=/usr/bin/zsh
