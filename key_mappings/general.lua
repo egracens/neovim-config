@@ -57,6 +57,11 @@ Map("v", "K", ":m '<-2<CR>gv=gv")
 Map("n", "<C-d>", "<C-d>zz")
 Map("n", "<C-u>", "<C-u>zz")
 
--- Bind the function to F6 key
+-- Select all text
 Map('n', '<F6>', 'ggVG=<C-o>', { noremap = true, silent = true })
+
+-- Autocorrect code
 Map('n', '<leader>rac', ':Format<CR>', { noremap = true, silent = true })
+
+-- Turn off search highlighting
+Map('n', '<F3>', ':noh<CR>')
