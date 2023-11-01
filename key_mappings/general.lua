@@ -65,3 +65,7 @@ Map('n', '<leader>rac', ':Format<CR>', { noremap = true, silent = true })
 
 -- Turn off search highlighting
 Map('n', '<F3>', ':noh<CR>')
+
+-- Copilot
+Map('i', '<A-Right>', '<Plug>(copilot-next)')
+Map('i', '<A-Left>', '<Plug>(copilot-previous)')

@@ -138,6 +138,9 @@ require('packer').startup(function(use)
   use('kevinhwang91/nvim-hlslens')
 
   use('mhartington/formatter.nvim')
+
+  -- Copilot
+  use('github/copilot.vim')
 end)
 
 -- the first run will install packer and our plugins
