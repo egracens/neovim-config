@@ -148,4 +148,12 @@ vim.api.nvim_create_autocmd("BufWritePre", {
   group = format_sync_grp,
 })
 
+vim.api.nvim_create_autocmd("BufWritePre", {
+  pattern = "*.rb",
+  callback = function()
+    vim.lsp.buf.format({ async = false })
+  end,
+  group = format_sync_grp,
+})
+
 require("rust-tools").setup(rustOpts)

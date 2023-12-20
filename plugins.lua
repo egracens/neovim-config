@@ -141,6 +141,12 @@ require('packer').startup(function(use)
 
   -- Copilot
   use('github/copilot.vim')
+
+  -- Tmux integration
+  use({
+      "aserowy/tmux.nvim",
+      config = function() return require("tmux").setup() end
+  })
 end)
 
 -- the first run will install packer and our plugins
