@@ -157,3 +157,11 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 })
 
 require("rust-tools").setup(rustOpts)
+
+-- Close quickfix window when selecting a line
+vim.api.nvim_create_autocmd(
+  "FileType", {
+  pattern={"qf"},
+  command=[[nnoremap <buffer> <CR> <CR>:cclose<CR>]]}
+)
+
