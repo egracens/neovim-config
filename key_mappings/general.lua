@@ -46,6 +46,9 @@ Map("t", "<C-j>", "<cmd>wincmd j<CR>")
 Map("t", "<C-k>", "<cmd>wincmd k<CR>")
 Map("t", "<C-l>", "<cmd>wincmd l<CR>")
 
+-- Disallow copying of deleted text
+Map("v", "d", '"_d')
+
 -- Text movement in visual mode
 -- horizontal
 Map("v", "<", "<gv")

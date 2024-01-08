@@ -16,6 +16,7 @@ require('packer').startup(function(use)
 
   -- Theme
   use 'morhetz/gruvbox'
+  use 'rebelot/kanagawa.nvim'
 
   -- Lazygit integration
   use 'kdheepak/lazygit.nvim'
