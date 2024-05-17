@@ -15,7 +15,7 @@ Map('n', '<leader>/', ':NvimTreeToggle<cr>')
 Map('n', '<leader>nf', ':NvimTreeFindFile<cr>')
 
 -- Telescope
-Map('n', '<leader>ff', ':Telescope find_files<cr>')
+Map('n', '<leader>ff', ':Telescope find_files hidden=true<cr>')
 Map('n', '<leader>fg', ':Telescope live_grep<cr>')
 Map('n', '<leader>fc', ':Telescope git_status<cr>')
 Map('n', '<leader>fr', ':Telescope resume<cr>')
