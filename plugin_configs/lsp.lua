@@ -1,8 +1,16 @@
 require('mason').setup()
-require('mason-lspconfig').setup({
-  ensure_installed = { 'lua_ls', 'solargraph', 'tsserver' }
-})
-util = require("lspconfig/util")
+
+local mason_lspconfig = require("mason-lspconfig")
+local servers = {
+  ruby_lsp = {},
+  lua_ls = {}
+}
+
+mason_lspconfig.setup {
+  ensure_installed = vim.tbl_keys(servers),
+}
+
+local util = require("lspconfig/util")
 
 -- Mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
@@ -41,20 +49,22 @@ end
 -- Set up lspconfig.
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
-local lsp_flags = {
-  -- This is the default in Nvim 0.7+
-  debounce_text_changes = 150,
+mason_lspconfig.setup_handlers {
+  function(server_name)
+    require("lspconfig")[server_name].setup {
+      capabilities = capabilities,
+      on_attach = on_attach,
+      settings = servers[server_name],
+      filetypes = (servers[server_name] or {}).filetypes,
+    }
+  end
 }
-vim.env["TSS_LOG"] = "-level verbose -file /home/egrace/tsserver.log"
+
 require('lspconfig').tsserver.setup{
   capabilities = capabilities,
   on_attach = on_attach,
-  flags = lsp_flags,
   filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
   cmd = { "typescript-language-server", "--stdio" },
-  diagnosticSeverityDenals = {
-    { pattern = "Parameter.* implicitly has an any type, but better type may be inferred from usage", severity = vim.lsp.protocol.DiagnosticSeverity.Hint }
-  },
   settings = {
     -- Добавьте вашу конфигурацию для tsserver
     -- Например, вы можете добавить опцию "noImplicitAny": false
@@ -70,11 +80,6 @@ require('lspconfig').tsserver.setup{
       }
     }
   }
-}
-
-require('lspconfig').solargraph.setup{
-  capabilities = capabilities,
-  on_attach = on_attach
 }
 
 require('lspconfig').gopls.setup {

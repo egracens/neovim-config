@@ -32,7 +32,11 @@ require('packer').startup(function(use)
   }
 
   -- Tabs at top of the screen
-  use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
+  use {
+    'akinsho/bufferline.nvim',
+    tag = '4.5.2',
+    requires = 'nvim-tree/nvim-web-devicons'
+  }
 
   -- Lualine
   use {
@@ -75,10 +79,6 @@ require('packer').startup(function(use)
 
   -- Store session
   use 'natecraddock/sessions.nvim'
-
-  -- Notes
-  use 'vimwiki/vimwiki'
-  use 'michal-h21/vim-zettel'
 
   -- Yaml support
   use 'Einenlum/yaml-revealer'

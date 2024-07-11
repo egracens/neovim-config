@@ -27,7 +27,7 @@ Map('n', '<leader>ts', ':TestSuite<cr>')
 Map('n', '<leader>p', ':PromoteToLet<cr>')
 
 -- Copy path to current file
-Map('n', '<leader>cp', ':let @+=expand("%")<cr>')
+Map('n', '<leader>cp', ':let @+=expand("%:.")<cr>')
 
 -- Spectre
 Map('n', '<leader>S', ":lua require('spectre').open()<cr>")
