@@ -1,23 +1,11 @@
--- Load plugins
-require('plugins')
+-- Load key mappings
+require('config.key_mappings')
 
--- Load plugin configurations
-require('plugin_configs.bufferline')
-require('plugin_configs.indent-blankline')
-require('plugin_configs.nvim-tree')
-require('plugin_configs.telescope')
-require('plugin_configs.nvim-cmp')
-require('plugin_configs.lsp')
-require('plugin_configs.treesitter')
-require('plugin_configs.lualine')
-require('plugin_configs.fidget')
-require('plugin_configs.spectre')
-require('plugin_configs.nvim-scrollbar')
-require('plugin_configs.nvim-hlslens')
-require('plugin_configs.formatter')
+-- Load plugins
+require('config.lazy')
+
+-- Load LSP configurations
+require('config.lsp')
 
 -- Load general configuration
-require('general_config')
-
--- Load key mappings
-require('key_mappings.general')
+require('config.general')
