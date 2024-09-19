@@ -73,3 +73,20 @@ Map('n', '<F3>', ':noh<CR>')
 -- Copilot
 Map('i', '<A-Right>', '<Plug>(copilot-next)')
 Map('i', '<A-Left>', '<Plug>(copilot-previous)')
+
+vim.keymap.set('n', '<leader>ccq', function()
+  local input = vim.fn.input("Quick Chat: ")
+  if input ~= "" then
+    require("CopilotChat").ask(input, { selection = require("CopilotChat.select").buffer })
+  end
+end, bufopts)
+
+local function set_copilot_keymap(key, action)
+  vim.keymap.set('n', key, function()
+    local actions = require("CopilotChat.actions")
+    require("CopilotChat.integrations.telescope").pick(actions[action]())
+  end, bufopts)
+end
+
+set_copilot_keymap('<leader>ccp', 'help_actions')
+set_copilot_keymap('<leader>cch', 'prompt_actions')

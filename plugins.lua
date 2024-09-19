@@ -143,6 +143,22 @@ require('packer').startup(function(use)
   -- Copilot
   use('github/copilot.vim')
 
+  use {
+    'CopilotC-Nvim/CopilotChat.nvim',
+    branch = 'canary',
+    requires = {
+      'zbirenbaum/copilot.lua',  -- or 'github/copilot.vim'
+      'nvim-lua/plenary.nvim'    -- for curl, log wrapper
+    },
+    run = 'make tiktoken',       -- Only on MacOS or Linux
+    config = function()
+      require('CopilotChat').setup{
+        debug = true,            -- Enable debugging
+        -- Add any additional configuration here
+      }
+    end
+  }
+
   -- Tmux integration
   use({
       "aserowy/tmux.nvim",

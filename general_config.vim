@@ -47,4 +47,5 @@ set ai
 autocmd BufWritePre * :%s/\s\+$//e
 
 " Set zsh as default shell
-set shell=/usr/bin/zsh
+set shell=zsh
+set shellcmdflag=-i

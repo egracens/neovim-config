@@ -60,7 +60,7 @@ mason_lspconfig.setup_handlers {
   end
 }
 
-require('lspconfig').tsserver.setup{
+require('lspconfig').ts_ls.setup{
   capabilities = capabilities,
   on_attach = on_attach,
   filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
