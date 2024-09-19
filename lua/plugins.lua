@@ -159,6 +159,14 @@ require('packer').startup(function(use)
     end
   }
 
+  use {
+    'rachartier/tiny-inline-diagnostic.nvim',
+    event = 'LspAttach',
+    config = function()
+      require('tiny-inline-diagnostic').setup()
+    end
+  }
+
   -- Tmux integration
   use({
       "aserowy/tmux.nvim",
