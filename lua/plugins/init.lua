@@ -3,9 +3,6 @@ return {
   { "ellisonleao/gruvbox.nvim", priority = 1000 , config = true },
   { 'rebelot/kanagawa.nvim' },
 
-  -- Lazygit integration
-  { 'kdheepak/lazygit.nvim' },
-
   -- JS indentation and highlighting
   { 'pangloss/vim-javascript' },
   { 'MaxMEllon/vim-jsx-pretty' },
