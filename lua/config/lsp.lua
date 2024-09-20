@@ -14,7 +14,7 @@ local util = require("lspconfig/util")
 
 -- Mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
-local opts = { noremap=true, silent=true }
+local opts = { noremap = true, silent = true }
 vim.keymap.set('n', '<space>e', vim.diagnostic.open_float, opts)
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, opts)
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
@@ -28,7 +28,7 @@ local on_attach = function(client, bufnr)
 
   -- Mappings.
   -- See `:help vim.lsp.*` for documentation on any of the below functions
-  local bufopts = { noremap=true, silent=true, buffer=bufnr }
+  local bufopts = { noremap = true, silent = true, buffer = bufnr }
   vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, bufopts)
   vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
   vim.keymap.set('n', 'gr', require('telescope.builtin').lsp_references, bufopts)
@@ -60,7 +60,7 @@ mason_lspconfig.setup_handlers {
   end
 }
 
-require('lspconfig').ts_ls.setup{
+require('lspconfig').ts_ls.setup {
   capabilities = capabilities,
   on_attach = on_attach,
   filetypes = { "javascript", "javascriptreact", "typescript", "typescriptreact" },
@@ -85,8 +85,8 @@ require('lspconfig').ts_ls.setup{
 require('lspconfig').gopls.setup {
   capabilities = capabilities,
   on_attach = on_attach,
-  cmd = {"gopls", "serve"},
-  filetypes = {"go", "gomod"},
+  cmd = { "gopls", "serve" },
+  filetypes = { "go", "gomod" },
   root_dir = util.root_pattern("go.work", "go.mod", ".git"),
   settings = {
     gopls = {
@@ -98,7 +98,7 @@ require('lspconfig').gopls.setup {
   },
 }
 
-require('lspconfig').lua_ls.setup{
+require('lspconfig').lua_ls.setup {
   on_attach = on_attach,
   settings = {
     Lua = {
@@ -166,7 +166,7 @@ require("rust-tools").setup(rustOpts)
 -- Close quickfix window when selecting a line
 vim.api.nvim_create_autocmd(
   "FileType", {
-  pattern={"qf"},
-  command=[[nnoremap <buffer> <CR> <CR>:cclose<CR>]]}
+    pattern = { "qf" },
+    command = [[nnoremap <buffer> <CR> <CR>:cclose<CR>]]
+  }
 )
-

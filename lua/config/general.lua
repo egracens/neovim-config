@@ -51,6 +51,6 @@ vim.api.nvim_create_autocmd('BufWritePre', {
 
 -- Set zsh as default shell
 vim.opt.shell = 'zsh'
-vim.opt.shellcmdflag = '-i'
+vim.opt.shellcmdflag = '-c'
 
 vim.diagnostic.config({ virtual_text = false })
