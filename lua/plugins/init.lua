@@ -37,15 +37,6 @@ return {
   { 'williamboman/mason-lspconfig.nvim' },
   { 'neovim/nvim-lspconfig' },
 
-  -- LSP server loading indication
-  {
-    'j-hui/fidget.nvim',
-    tag = 'legacy',
-    config = function()
-      require('fidget').setup()
-    end
-  },
-
   -- Snippets support
   { 'L3MON4D3/LuaSnip' },
   { 'saadparwaiz1/cmp_luasnip' },
@@ -85,5 +76,5 @@ return {
   {
     'aserowy/tmux.nvim',
     config = function() return require("tmux").setup() end
-  }
+  },
 }

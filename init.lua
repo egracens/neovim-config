@@ -1,11 +1,8 @@
--- Load key mappings
-require('config.key_mappings')
-
 -- Load plugins
 require('config.lazy')
+require('config.keymaps')
+require('config.lsp')
+require('config.options')
 
 -- Load LSP configurations
 require('config.lsp')
-
--- Load general configuration
-require('config.general')

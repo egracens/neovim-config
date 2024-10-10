@@ -10,8 +10,6 @@ function keys.Map(mode, keybinding, command, opts)
   vim.keymap.set(mode, keybinding, command, options)
 end
 
-vim.g.mapleader = ','
-
 -- NvimTree
 keys.Map('n', '<leader>/', ':NvimTreeToggle<cr>')
 keys.Map('n', '<leader>nf', ':NvimTreeFindFile<cr>')
