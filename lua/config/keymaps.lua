@@ -8,3 +8,11 @@ vim.keymap.set(
   ':let @+=expand("%:.")<cr>',
   { desc = "Copy file name to clipboard (relative to cwd)" }
 )
+
+vim.keymap.set("n", "<leader>grv", function()
+  require("config.rails").open_view()
+end, { desc = "Go to Rails view" })
+
+vim.keymap.set("n", "<leader>grc", function()
+  require("config.rails").open_controller()
+end, { desc = "Go to Rails controller" })
